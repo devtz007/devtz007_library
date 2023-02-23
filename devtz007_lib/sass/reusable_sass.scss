@@ -1,0 +1,127 @@
+@import "./variable_placeholder";
+@import "./flex_lib";
+@import "./extend_placeholder";
+/*-------------------------------------------------*\
+                reusable sass
+\*-------------------------------------------------*/
+h1,
+h2,
+h4,
+h5 {
+  font-family: "berk";
+}
+h1 {
+  font-size: 10vw;
+}
+h2 {
+  font-size: 2.5rem;
+  @media screen and (max-width: 745px) {
+    & {
+      font-size: 2rem;
+    }
+  }
+}
+h3 {
+  font-size: 1rem;
+}
+
+h5.name {
+  font-size: 1.2rem;
+}
+h6 {
+  font-size: 0.9rem;
+  color: $--h6-C;
+}
+
+input,
+textarea {
+  outline: none;
+}
+p {
+  letter-spacing: normal;
+  line-height: 1.5;
+  text-transform: none;
+  font-style: normal;
+  font-weight: normal;
+  color: #333;
+}
+table,
+tr,
+td {
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+}
+em {
+  font-weight: 600;
+  font-style: italic;
+}
+//myBtn-cont
+.myBtn-cont {
+  @include flex;
+  width: 100%;
+  .myBtn-b,
+  .myBtn-a {
+    // background-color: $--myBtn-bgC;
+    // color: $--myBtn-C;
+    min-width: 150px;
+    padding: 10px 0px;
+    border-radius: 9999999999px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    @media screen and (max-width: 860px) {
+      & {
+        min-width: 100px;
+        padding: 5px 0px;
+        border-radius: 9999999999px;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+//width-wrapper
+.width-wrapper {
+  width: 90%;
+  @media screen and (max-width: 320px) {
+    & {
+      width: 95%;
+    }
+  }
+}
+//sec-main-heading
+.sec-main-heading {
+  @include flex-left;
+  width: 100%;
+  margin-bottom: 100px;
+  color: $--sec-main-heading-C;
+  h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  .second-color {
+    color: $--sec-main-heading-second-C;
+  }
+  .color-alt {
+    color: $--sec-main-heading-alt-C;
+  }
+  @media screen and (max-width: 800px) {
+    & {
+      @include flex-cen;
+      margin-bottom: 25px;
+      h2 {
+        font-size: 8vw;
+      }
+    }
+  }
+}
+//section padding
+section {
+  @extend %--section;
+  @media screen and (max-width: 500px) {
+    & {
+      padding: 50px 0;
+    }
+  }
+}

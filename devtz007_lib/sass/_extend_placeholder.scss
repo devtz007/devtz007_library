@@ -1,0 +1,35 @@
+/*import sass*/
+//import sass flex library
+@import './variable_placeholder';
+@import './flex_lib';
+
+
+/*-------------------------------------------------*\
+                extend placeholder
+\*-------------------------------------------------*/
+//width-height {
+%--width-100 {
+  width: 100%;
+}
+%--height-100 {
+  width: 100%;
+}
+%--width-height-100 {
+  width: 100%;
+  height: 100%;
+}
+
+//glass
+%--glass-morphism {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 3px 32px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+%--section {
+  @include flex-top;
+  padding: 100px 0;
+}
